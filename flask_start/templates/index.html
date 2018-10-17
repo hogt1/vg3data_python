@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<p>Home page for the <a href="https://code.visualstudio.com/docs/python/tutorial-flask">Visual Studio Code Flask tutorial.</a></p>
+<ul>
+    <li><a href="{{ url_for('hello_there', name='Tom')}}">hello - ruten</a></li>
+    <li><a href="{{ url_for('get_document', filename='python3_cheat_sheet.pdf') }}">Python 3 - Cheat Sheet</a></li>
+    <li><a href="{{ url_for('form')}}">Form</a></li>    
+</ul>
+{% endblock %}
