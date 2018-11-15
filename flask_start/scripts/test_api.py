@@ -4,6 +4,7 @@ response = requests.post('http://localhost:5000/api/add_data', json={'some_value
 print('Poster data')
 print(response.status_code, response.text)
 print()
+
 print('Henter data')
 response = requests.get('http://localhost:5000/api/dht11')
 data = response.json() # Konverterer json data til en dict
