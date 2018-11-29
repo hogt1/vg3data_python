@@ -10,14 +10,15 @@ def index():
 
 # Her er <name> et parameter til ruten eks.:http://127.0.0.1/hello/tom
 @app.route("/hello/<name>")
-def hello_there(name):
+def hello(name):
     now = datetime.now()
     content = "Hello there, {} {:%d.%m.%Y %H:%M:%S}".format(name, now)
     return render_template(
-        "hello_there.html",
+        "hello.html",
         title='Hello, Flask',
         content=content,
-        date=datetime.now()
+        date=datetime.now(),
+        name=name
     )
 
 # Ofte vil du servere filer 
@@ -41,11 +42,12 @@ def form():
 
 @app.route("/form/post", methods=['POST'])
 def form_post():
-    for k, v in request.environ.items():
-        print('{}={}'.format(k,v))
-    return '<pre>Fornavn: {}\nEtternavn: {}\n'.format(
+    #for k, v in request.environ.items():
+    #    print('{}={}'.format(k,v))
+    return '<pre>Fornavn: {}\nEtternavn: {}\nDato:{}</pre>'.format(
         request.form['firstname'], 
-        request.form['lastname'])
+        request.form['lastname'], 
+        request.form['dato'])
 
 
 # Motta JSON Data
