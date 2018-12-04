@@ -1,7 +1,7 @@
 body{
     font-size: 20px;
 }
-input {
+input, textarea {
     font-size: 20px;
 }
 .message {
