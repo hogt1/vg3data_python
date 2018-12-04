@@ -13,8 +13,7 @@ def calculate(stack, op):
     if inn == '+':
         liste = add(liste)
     else:
-        liste.append(inn)
-    
+        liste.append(inn)    
     return liste
 
 if __name__ == '__main__':    

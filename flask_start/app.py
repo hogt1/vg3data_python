@@ -42,6 +42,7 @@ def form():
 
 @app.route("/form/post", methods=['POST'])
 def form_post():
+    #stack = rpn.calculate(request.form['stack'], request.form['op'])
     #for k, v in request.environ.items():
     #    print('{}={}'.format(k,v))
     return '<pre>Fornavn: {}\nEtternavn: {}\nDato:{}</pre>'.format(
@@ -49,6 +50,10 @@ def form_post():
         request.form['lastname'], 
         request.form['dato'])
 
+
+@app.route("/kalkulator")
+def kalkulator():
+    return render_template('kalkulator.html')
 
 # Motta JSON Data
 # Test med et script 
