@@ -1,5 +1,6 @@
-ï»¿@echo off
+@echo off
 py -3 -m venv env
-pip install -r requirements.txt
-@echo "Du har nÃ¥ opprettet et virtualt miljÃ¸ for Python!"
-@echo "NÃ¸dvendige pakker ble installert med: pip install -r requirements.txt"
+@echo "Du har nå opprettet et virtualt miljø for Python!"
+@echo "Du aktiverer dette med env_activate.bat!"
+@echo "Du må installere pakkene med: pip install -r requirements.txt"
+
