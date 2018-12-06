@@ -6,7 +6,7 @@ Dette er en form
 {# https://www.w3schools.com/html/html_form_input_types.asp #}
 
 <form action="{{ url_for('kalkulator')}}" method="post">
-    <textarea cols="40" rows="10" name="stack"></textarea><br>
+    <textarea cols="40" rows="10" name="stack">{{ stack_out }}</textarea><br>
     <input type="text" name="inn" value="" size="40"><br>
     <input type="submit" value="Submit">
 </form>

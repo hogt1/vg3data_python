@@ -1,5 +1,6 @@
 from datetime import datetime
 from flask import Flask, render_template, send_from_directory, request, jsonify
+from rpn import calculate
 
 app = Flask(__name__)
 
@@ -53,13 +54,16 @@ def form_post():
 
 @app.route("/kalkulator", methods=['POST', 'GET'])
 def kalkulator():
+    stack = ''
     if request.method == 'POST':
         stack = request.form['stack']
         inn = request.form['inn']
+        stack = stack.split('\r\n')
+        #stack = calculate(stack, inn)
         print(stack)
-        print(inn)
+        #print(inn)
 
-    return render_template('kalkulator.html')
+    return render_template('kalkulator.html', stack_out=stack)
 
 # Motta JSON Data
 # Test med et script 
