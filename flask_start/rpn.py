@@ -16,9 +16,11 @@ def calculate(stack, op):
     else:
         liste.append(inn)
     
-    str_liste = []
-    for e in liste:
-        str_liste.append(str(e))    
+    str_liste = [str(e) for e in liste]
+
+    #str_liste = []
+    #for e in liste:
+    #    str_liste.append(str(e))    
     return str_liste
 
 if __name__ == '__main__':    
