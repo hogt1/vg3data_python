@@ -51,8 +51,14 @@ def form_post():
         request.form['dato'])
 
 
-@app.route("/kalkulator")
+@app.route("/kalkulator", methods=['POST', 'GET'])
 def kalkulator():
+    if request.method == 'POST':
+        stack = request.form['stack']
+        inn = request.form['inn']
+        print(stack)
+        print(inn)
+
     return render_template('kalkulator.html')
 
 # Motta JSON Data
