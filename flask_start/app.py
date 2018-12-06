@@ -59,11 +59,11 @@ def kalkulator():
         stack = request.form['stack']
         inn = request.form['inn']
         stack = stack.split('\r\n')
-        #stack = calculate(stack, inn)
+        stack = calculate(stack, inn)
         print(stack)
         #print(inn)
 
-    return render_template('kalkulator.html', stack_out=stack)
+    return render_template('kalkulator.html', stack_out='\r\n'.join(stack))
 
 # Motta JSON Data
 # Test med et script 
